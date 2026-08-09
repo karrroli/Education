@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1c2a24;
+      --ink-soft: #3d5248;
+      --mist: #e7f0ea;
+      --leaf: #2f6b4f;
+      --leaf-deep: #1e4a36;
+      --sun: #f3e6c8;
+      --paper: #f7faf8;
+      --line: rgba(28, 42, 36, 0.12);
+      --shadow: 0 24px 60px rgba(30, 74, 54, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Manrope", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 700px at 12% -10%, #dceee3 0%, transparent 55%),
+        radial-gradient(900px 600px at 100% 0%, var(--sun) 0%, transparent 45%),
+        linear-gradient(180deg, #f4f8f5 0%, var(--paper) 45%, #eef5f0 100%);
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.35;
+      background-image:
+        linear-gradient(rgba(47, 107, 79, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47, 107, 79, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 85%);
+    }
+
+    .page {
+      position: relative;
+      width: min(920px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 2.5rem 0 4rem;
+    }
+
+    .brand {
+      display: inline-block;
+      font-size: clamp(2.8rem, 8vw, 5.2rem);
+      font-weight: 650;
+      font-family: "Newsreader", Georgia, serif;
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+      color: var(--leaf-deep);
+      animation: rise 0.9s ease both;
+    }
+
+    .hero {
+      min-height: min(78vh, 720px);
+      display: grid;
+      align-content: end;
+      gap: 1.25rem;
+      padding: 1rem 0 3rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero h1 {
+      max-width: 14ch;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      animation: rise 0.9s ease 0.12s both;
+    }
+
+    .hero p {
+      max-width: 36ch;
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      animation: rise 0.9s ease 0.22s both;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-top: 0.5rem;
+      width: fit-content;
+      color: var(--leaf);
+      font-weight: 600;
+      text-decoration: none;
+      animation: rise 0.9s ease 0.32s both;
+    }
+
+    .cta span {
+      display: inline-block;
+      transition: transform 0.25s ease;
+    }
+
+    .cta:hover span {
+      transform: translateX(4px);
+    }
+
+    .panel {
+      margin-top: 2.5rem;
+      padding: 2rem 0 0;
+      animation: rise 0.9s ease 0.4s both;
+    }
+
+    .panel h2 {
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .panel p + p {
+      margin-top: 1rem;
+    }
+
+    .panel p {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      max-width: 62ch;
+    }
+
+    .notes {
+      margin-top: 2rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .notes li {
+      list-style: none;
+      padding-left: 1.1rem;
+      position: relative;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .notes li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: var(--leaf);
+    }
+
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 1.5rem, 920px);
+        padding-top: 1.75rem;
+      }
+
+      .hero {
+        min-height: 70vh;
+        padding-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="brand">Education</p>
+      <h1>Учёба, которую можно показать близким</h1>
+      <p>Один документ — открывается сразу с оформлением, без лишних файлов и без «сырого» текста.</p>
+      <a class="cta" href="#about">Читать дальше <span aria-hidden="true">→</span></a>
+    </header>
+
+    <section class="panel" id="about">
+      <h2>О чём этот документ</h2>
+      <p>
+        Это публичная страница проекта Education. Здесь можно коротко и понятно
+        рассказать, чему вы учитесь, что уже получилось и что планируете дальше.
+      </p>
+      <p>
+        Страница хранится как один файл: открыли ссылку — сразу виден аккуратный текст
+        с заголовками, отступами и нормальной типографикой.
+      </p>
+
+      <ul class="notes">
+        <li>Понятно без технических деталей</li>
+        <li>Удобно открыть с телефона</li>
+        <li>Легко обновить текст в одном месте</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      Education · можно смело отправить ссылку маме
+    </footer>
+  </main>
+</body>
+</html>
