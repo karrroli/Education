@@ -1,3 +1,5 @@
 # Education
 
-Публичная страница: один файл [`index.html`](./index.html).
+Один документ: [`index.html`](./index.html).
+
+Публичная ссылка для просмотра: https://education-for-mom.vercel.app
