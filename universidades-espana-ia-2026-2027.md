@@ -202,7 +202,7 @@
 |---|---|
 | Вуз | Universitat Politècnica de València (UPV) — **другой город**, не Valencia |
 | Город | **Alcoy / Alcoi** (провинция Alicante) |
-| Сайт кампуса | [Campus Alcoy UPV](https://www.upv.es/conocenos/campus-alcoy/) · [карта Alcoy](https://www.upv.es/plano/index-en.html) |
+| Сайт кампуса | [EPSA Alcoy](https://www.upv.es/entidades/epsa/) · [Как добраться · Alcoy](https://www.upv.es/otros/como-llegar-upv/campus-alcoy/) · [карта Alcoy](https://www.upv.es/plano/index-en.html) |
 | Google Maps | [Открыть кампус Alcoy / EPSA](https://www.google.com/maps/search/?api=1&query=UPV+Campus+de+Alcoy+Escuela+Politécnica+Superior) |
 | Программы из таблицы | Inteligencia Artificial · Ingeniería Informática |
 | Студентов (ориентир) | Кампус **намного меньше** Vera; вуз общий ≈ 28–30 тыс. |
