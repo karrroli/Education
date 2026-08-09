@@ -11,13 +11,11 @@
     :root {
       --ink: #1c2a24;
       --ink-soft: #3d5248;
-      --mist: #e7f0ea;
       --leaf: #2f6b4f;
       --leaf-deep: #1e4a36;
       --sun: #f3e6c8;
       --paper: #f7faf8;
       --line: rgba(28, 42, 36, 0.12);
-      --shadow: 0 24px 60px rgba(30, 74, 54, 0.12);
     }
 
     * {
@@ -38,7 +36,7 @@
         radial-gradient(1200px 700px at 12% -10%, #dceee3 0%, transparent 55%),
         radial-gradient(900px 600px at 100% 0%, var(--sun) 0%, transparent 45%),
         linear-gradient(180deg, #f4f8f5 0%, var(--paper) 45%, #eef5f0 100%);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     body::before {
@@ -82,7 +80,7 @@
     }
 
     .hero h1 {
-      max-width: 14ch;
+      max-width: 16ch;
       font-family: "Newsreader", Georgia, serif;
       font-size: clamp(1.8rem, 4.5vw, 3rem);
       font-weight: 500;
@@ -93,8 +91,8 @@
     }
 
     .hero p {
-      max-width: 36ch;
-      font-size: 1.05rem;
+      max-width: 38ch;
+      font-size: 1.08rem;
       color: var(--ink-soft);
       animation: rise 0.9s ease 0.22s both;
     }
@@ -126,6 +124,12 @@
       animation: rise 0.9s ease 0.4s both;
     }
 
+    .panel + .panel {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+    }
+
     .panel h2 {
       font-family: "Newsreader", Georgia, serif;
       font-size: clamp(1.5rem, 3vw, 2rem);
@@ -144,9 +148,9 @@
     }
 
     .notes {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       display: grid;
-      gap: 1rem;
+      gap: 0.9rem;
     }
 
     .notes li {
@@ -204,31 +208,42 @@
   <main class="page">
     <header class="hero">
       <p class="brand">Education</p>
-      <h1>Учёба, которую можно показать близким</h1>
-      <p>Один документ — открывается сразу с оформлением, без лишних файлов и без «сырого» текста.</p>
+      <h1>Мам, смотри — я учусь и делаю своё</h1>
+      <p>Короткая страница о проекте Education: зачем он нужен и что уже получается.</p>
       <a class="cta" href="#about">Читать дальше <span aria-hidden="true">→</span></a>
     </header>
 
     <section class="panel" id="about">
-      <h2>О чём этот документ</h2>
+      <h2>Зачем это</h2>
       <p>
-        Это публичная страница проекта Education. Здесь можно коротко и понятно
-        рассказать, чему вы учитесь, что уже получилось и что планируете дальше.
+        Education — мой учебный проект. Здесь я собираю то, чему учусь, и показываю результат
+        простым языком, без сложных терминов.
       </p>
       <p>
-        Страница хранится как один файл: открыли ссылку — сразу виден аккуратный текст
-        с заголовками, отступами и нормальной типографикой.
+        Эту страницу можно открыть с телефона по одной ссылке — сразу видно аккуратный текст,
+        а не «технический файл».
       </p>
+    </section>
 
+    <section class="panel" id="now">
+      <h2>Что уже есть</h2>
       <ul class="notes">
-        <li>Понятно без технических деталей</li>
-        <li>Удобно открыть с телефона</li>
-        <li>Легко обновить текст в одном месте</li>
+        <li>Одна понятная публичная страница</li>
+        <li>Всё хранится в одном документе — легко обновлять</li>
+        <li>Ссылку можно просто отправить в мессенджере</li>
       </ul>
     </section>
 
+    <section class="panel" id="next">
+      <h2>Что дальше</h2>
+      <p>
+        Дальше буду дополнять эту страницу: чему научился за неделю, что получилось сделать
+        и какой следующий шаг.
+      </p>
+    </section>
+
     <footer class="footer">
-      Education · можно смело отправить ссылку маме
+      Education · обновлено 9 августа 2026
     </footer>
   </main>
 </body>
